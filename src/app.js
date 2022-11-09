@@ -6,6 +6,7 @@ const geoCode = require('../src/utils/geoCode')
 const foreCast = require('../src/utils/foreCast')
 const request = require ('request')
 const { response } = require('express')
+const port = process.env.PORT || 3000
 
 console.log(__dirname)
 console.log(__filename)
@@ -88,4 +89,4 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000, ()=>{console.log('Server up and running at node 3000')})
+app.listen(port, ()=>{console.log('Server up and running at node'+ port)})
